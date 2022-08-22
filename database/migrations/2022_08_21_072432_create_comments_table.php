@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->bigInteger('post_id', false, true)->nullable(false);
             $table->foreign('post_id')->references('id')->on('posts');
-            $table->string('commenter_name', 256)->nullable(false);
+            $table->string('commenter_name', 255)->nullable(false);
             $table->text('message')->nullable(false);
         });
     }
